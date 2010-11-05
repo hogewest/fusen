@@ -15,9 +15,9 @@ class Stickies < Sequel::Model
     set_schema do
       primary_key :id
       text :message
-      float :left
-      float :top
-      string :delete_flg
+      Float :left
+      Float :top
+      String :delete_flg
       timestamp :created_at
       timestamp :updated_at
     end
