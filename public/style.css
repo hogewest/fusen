@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+/*========================================
+  Elements
+========================================*/
+
+html {
+  height:100%;
+}
+
+body {
+  background: #647D8F;
+  height: 100%;
+  font-size: 80%;
+  font-family: 'Lucida Grande',Verdana,Arial,'Hiragino Kaku Gothic Pro',Meiryo,'メイリオ',sans-serif;
+}
+
+a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  margin: 0 0 0.5em 0;
+  font-size: 1.5em;
+}
+
+h3 {
+  margin: 0 0 1em 0;
+  font-size: 1.2em;
+}
+
+p {
+  font-size: 1.2em;
+}
+
+/*========================================
+  id
+========================================*/
+
+div#container {
+  position: relative;
+  min-height: 100%;
+}
+
+div#body {
+  padding-bottom:30px;
+}
+
+body > #container {
+  height: auto;
+}
+
+* html div#continer {
+  height: 100%;
+}
+
+#header {
+  height: 46px;
+  width: 100%;
+  background: #596F80;
+  color: #fff;
+}
+
+#fusen-box {
+  width: 1000px;
+  height: 600px;
+  min-height: 100%;
+  float: left;
+}
+
+#create-area {
+  margin-left: 1000px;
+}
+
+#create {
+  cursor: pointer;
+  font-size: 100px;
+  z-index: 999;
+}
+
+#message {
+  width: 356px;
+  height: 200px;
+  margin: 15px 0px 0px 0px;
+}
+
+#footer {
+  background: #596F80;
+  color: #fff;
+  text-align: center;
+  clear: both;
+  position: absolute;
+  bottom: 0px;
+  padding-top:10px;
+  height: 30px;
+  width: 100%;
+}
+
+/*========================================
+  class
+========================================*/
+
+.sticky-header {
+  border-bottom: solid 1px #000;
+  cursor: move;
+  width: auto;
+}
+
+.sticky {
+  -moz-box-shadow: 3px 3px 5px #000;
+  -webkit-box-shadow: 3px 3px 5px #000;
+  background: #FFF47F;
+  position: absolute;
+  text-align: right;
+}
+
+.sticky-body {
+  width: auto;
+  height: auto;
+  padding: 5px 15px 5px 15px;
+  text-align: left;
+}
+
+.close {
+  cursor: pointer;
+  padding: 2px;
+}
+
+.create-color {
+  color: #f4a460;
+}

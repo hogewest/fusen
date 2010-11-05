@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <meta http-equiv="Content-Script-Type" content="text/javascript">
+  <title>Fusen</title>
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link href="/reset.css" rel="stylesheet" type="text/css" />
+  <link href="/style.css" rel="stylesheet" type="text/css" />
+  <link href="/jquery-ui-1.8.5.custom.css" rel="stylesheet" type="text/css" />
+  <link href="/jquery.validity.custom.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="/jquery-ui-1.8.5.custom.min.js"></script>
+  <script type="text/javascript" src="/jquery.validity.custom.js"></script>
+  <script type="text/javascript" src="/app.js"></script>
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1><a href="/">Fusen</a></h1>
+    </div>
+    <div id="body">
+      <%= yield %>
+    </div>
+    <div id="footer">
+      <p>Created by <a href="http://twitter.com/hogewest">@hogewest</a></p>
+    </div>
+  </div>
+</body>
+</html>
