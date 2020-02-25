@@ -1,10 +1,10 @@
 source :gemcutter
 
-gem 'sinatra', '1.1.0'
-gem 'json', '1.4.3'
-gem 'sequel', '3.16.0'
+gem 'sinatra', '2.0.8.1'
+gem 'json', '2.3.0'
+gem 'sequel', '5.29.0'
 
 group :development do
-  gem 'sqlite3-ruby', :require => 'sqlite3'
+  gem 'sqlite3'
   gem 'sinatra-reloader'
 end

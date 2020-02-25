@@ -2,13 +2,13 @@ require 'rubygems'
 require 'sinatra'
 require 'json'
 require 'erb'
-require 'models/sticky'
+require './models/sticky'
 
 require "sinatra/reloader" if development?
 
 class App < Sinatra::Base
   configure do
-    set :public, File.dirname(__FILE__) + '/public'
+    set :public_dir, File.dirname(__FILE__) + '/public'
     set :views, File.dirname(__FILE__) + '/views'
   end
 
@@ -32,7 +32,7 @@ class App < Sinatra::Base
   
   get '/init' do
     content_type :json
-    sticky = Stickies.filter('delete_flg is null').order(:updated_at, :id).map{|e|e.values}
+    sticky = Stickies.where(delete_flg: nil).order(:updated_at, :id).map{|e|e.values}
     sticky.each{|s| s[:message] = sbr(s[:message])}
     JSON.unparse(sticky)
   end
@@ -51,7 +51,7 @@ class App < Sinatra::Base
   
     id = params[:id].gsub(/id_/, '')
     params.delete('id')
-    sticky = Stickies.find(:id => id).update(params)
+    sticky = Stickies[id].update(params)
     message = sticky.nil? ? params[:message] : sticky.message
   
     JSON.generate("id" => id, "message" => sbr(message))
@@ -61,6 +61,8 @@ class App < Sinatra::Base
     id = params[:id].gsub(/id_/, '')
     params.delete('id')
     params[:delete_flg] = '1'
-    Stickies.filter('id = ?', id).update(params)
+    Stickies[id].update(params)
+
+    JSON.generate("ok" => true)
   end
 end
