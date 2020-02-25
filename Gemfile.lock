@@ -34,7 +34,6 @@ GEM
 
 PLATFORMS
   ruby
-  x86-mswin32
 
 DEPENDENCIES
   json
