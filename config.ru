@@ -8,5 +8,5 @@ rescue LoadError
   Bundler.setup
 end
 
-require 'app'
+require './app'
 run App
